@@ -8,7 +8,5 @@ public class Main {
 
         myCar.printInfo();
 
-        System.out.println( myCar.getCompany() );
-        System.out.println( myCar.getSpeed() );
     }
 }
