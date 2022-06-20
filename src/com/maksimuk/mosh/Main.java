@@ -95,7 +95,7 @@ public class Main {
         int [] numbers = new int[5];
         numbers [0] =1;
         numbers [1] = 2; // - initialising ann array like this is old syntax
-        System.out.println(numbers); // if we print an array by default Java will return a string that  based on the address of the object in memory (we got [I@6f539caf). Use class array
+        System.out.println(Arrays.toString(numbers)); // if we print an array by default Java will return a string that  based on the address of the object in memory (we got [I@6f539caf). Use class array
         System.out.println((Arrays.toString(numbers))); // we got [1, 2, 0, 0, 0], the last tree elements are set to 0 by default, if boolean, to false, if strung - empty string
         //To initialize an array more effectively:
         int[] newNumbers = {2,3,5,1,4};
@@ -104,6 +104,53 @@ public class Main {
         Arrays.sort(newNumbers);
         System.out.println(Arrays.toString(newNumbers));
         //Multi-dimensional arrays
+        int [][] moreNumbers = new int [2][3]; // also old syntax.
+        moreNumbers [0][0]=1;
+        System.out.println(Arrays.toString(moreNumbers)); //will return a place in a memory because we're dealing with multidimensional array
+        System.out.println(Arrays.deepToString(moreNumbers)); // deepToString is used for printing multidimensional array. We will get [[1, 0, 0], [0, 0, 0]]
+        int [][][] mDArray = new int [2][3][5];
+        int [][] mDArray2 = {{1,2,3},{4,5,6}};
+        System.out.println(Arrays.deepToString(mDArray2));
+
+ //Constants
+       final float PI =3.14F; // if we type final, Java will treat this as constant, so after initializing, we won't be able to change it later.Pi is a final variable or a constant.
+        //Constants are always capital letters.
+//Arithmetic Expressions. An expression is a piece of code that produces a value.
+        int addResult = 10+3; //addition
+        System.out.println(addResult);
+        int subResult = 10-3; // subtraction
+        int multipleResult = 10*3; //multiplication
+        int divResult = 10/3;
+        System.out.println(divResult); //the result will be 3, because in Java the division of two whole numbers is a whole number, to get a floating number, whole numbers have to be converted
+        //into floating numbers:
+        double divResult2 = (double)10/(double)3;
+        System.out.println(divResult2);
+        // +-*/ are arithmetic operators, 10 and 3 are operants
+        //Increment and decrement operators:
+        /*int x =1;
+        //x++; x--;
+        int y = x++;// increment operator is applied as postfix, meaning first the value of x will be copied to y, y=1; and then the value of x will be incremented(x will be 2, y will be 1)
+        int z = ++x; // increment operator is applied as prefix. First x will be incremented by 1, and then it will be copied to z. X and Z will be equal 2.
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);*/
+
+    //Augmented (or compound) assignment operator (+=; -=; *=; /=)
+        int x =1;
+        x+=5; // Equivalent to x = x + 5
+        System.out.println(x); //we'll get 6
+        //multiplication and division operators have higher priority, they're executed first.
+        int multiFirst = 10+3*2;// answer is 16
+        System.out.println(multiFirst);
+        // () have the highest priority
+        int parFirst = (10+3)*2;
+        System.out.println(parFirst); //answer is 26
+
+        //Casting and Type conversion
+        //adding a short to an integer, 2 diff types of values, Implicit casting happens because we try to store a short value (2 bytes) in an int (4 bytes).
+        short m =1; //two bytes
+        //implicit casting happens automatically when we store a value in a larger or more precise data type.
+        int l = x+2;
 
     }
 }
