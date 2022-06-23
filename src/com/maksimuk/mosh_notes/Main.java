@@ -1,4 +1,4 @@
-package com.maksimuk.mosh;
+package com.maksimuk.mosh_notes;
 
 /*General*/
 //Java was developed by James Gosling in 1995 at Sun Microsystems and later was acquired by Oracle.
@@ -30,17 +30,13 @@ public  class Main {
 // Variables are used for temporarily data storage. In Java, the variable should be specified at the time of declaration.
 
 import java.awt.*;
-import java.security.Principal;
-import java.sql.SQLOutput;
-import java.text.FieldPosition;
 import java.text.NumberFormat;
-import java.text.ParsePosition;
 import java.util.Arrays;
 import java.util.Date; //in order to use the class from other packages, we need to import them
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         int age = 30; //Int - type of variable that stores only integers, whole numbers
         age = 35; //primitive type, not an onjects, doesn't have components
@@ -232,47 +228,7 @@ public class Main {
         String userName = scanner.nextLine().trim(); //chaining methods.
         System.out.println("U are " + userName);*/
 
-//Mortgage calculator (my solution):
-      Scanner mortgageScanner = new Scanner(System.in);
-        System.out.print("Principal: ");
-        int principal = mortgageScanner.nextInt();
-        System.out.println("Principal: " + principal);
-        System.out.print("Annual Interest Rate: ");
-        float annualInterest = mortgageScanner.nextFloat();
-        System.out.println("Annual Interest Rate: " + annualInterest +"%");
-        System.out.print("Period (years): ");
-        byte period = mortgageScanner.nextByte();
-        System.out.println("Period (years): " + period);
-        float monthlyInterest = (annualInterest/100/12);
-        System.out.println(monthlyInterest);
-        int numOfPayments = period*12;
-        double top = Math.pow(1+monthlyInterest, numOfPayments) * monthlyInterest;
-        double bottom = Math.pow(1+monthlyInterest, numOfPayments) -1;
-        double mortgage = principal * (top/bottom);
-        String mortgagePayment = NumberFormat.getCurrencyInstance().format(mortgage);
-        System.out.println(mortgagePayment);
 
-//Mosh solution
-        /*
-        final byte MONTHS_IN_YEAR =12; //good practice instead using numbers like 12 or 100
-
-        final byte PERCENT =100;
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Principal: ");
-        int principal = mortgageScanner.nextInt();
-        System.out.print("Annual Interest Rate: ");
-        float annualInterest = scanner.nextFloat();
-        monthlyInterest = annualInterest/PERCENT/MONTHS_IN_YEAR;
-        System.out.print("Period (years): ");
-        byte period = scanner.nextByte();
-        int numberOfPayments = period*MONTHS_IN_YEAR;
-        double mortgage = principal
-                * (monthlyInterest* Math.pow(1+monthlyInterest, numOfPayments))
-                /Math.pow(1+monthlyInterest, numOfPayments) -1;
-        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
-        System.out.println(mortgageFormatted);
-        */
 
 
 //Control Flow
@@ -366,19 +322,7 @@ public class Main {
                 System.out.println("U're guest");
         }
 
-//fizzbuzz - my solution
-       Scanner fizzBuzzScanner = new Scanner(System.in);
-        System.out.print("Your Number: ");
 
-        int yourNum = fizzBuzzScanner.nextInt();
-        if (yourNum%5==0 && yourNum%3==0)
-            System.out.println("FizzBuzz");
-        else if (yourNum%5 == 0)
-            System.out.println("Fizz");
-        else if (yourNum%3 == 0)
-            System.out.println("Buzz");
-        else
-            System.out.println(yourNum);
 
 //For loops
         /*for (int i = 0; i<=5; i++) { //{} for multiple statements
@@ -396,10 +340,13 @@ public class Main {
         String input = "";
         //while ( input != "quit") - wont work because string is a reference type, and we cannot use comparison operators between reference types (operators will compare addresses of string, not value)
         Scanner scanner = new Scanner(System.in);
-        while (!input.equals("quit")) {
+        while /*(!input.equals("quit")*/ (true) {
             System.out.println("Input: ");
             input = scanner.next().toLowerCase();
-            if (!input.equals("quit"))
+            if (input == "pass")
+                continue; // Java will move control at the beginning of the loop
+            if (input.equals("quit"))
+                break; //terminates the loop
                 System.out.println(input);
         }
 // Do..While Loops ... are very similar to while loops but they executed at least once. In contrast, a while loop may never get executed if the condition is initially false.
@@ -409,6 +356,39 @@ public class Main {
             System.out.println(input);
         } while(!input.equals("quit"));*/
 
+
+//For..Each loop - For-each loops are useful for iterating over an array or a collection.
+
+        String[] fruits = {"mango", "apple", "orange"};
+          /*for (int i =0; i<fruits.length; i++)
+          System.out.println(fruits [i]);
+           */
+        for (String fruit: fruits) //  for each is forward only/ we don't have access indexes of items
+            System.out.println(fruit);
+
+//Mortgage calculator updated
+
+        final byte MONTHS_IN_YEAR =12;
+        final byte PERCENT =100;
+
+        Scanner m_scanner = new Scanner(System.in);
+        System.out.print("Principal ($1K - $1M): ");
+        int principal = scanner.nextInt();
+        while (principal>1000 && principal<1000000)
+            System.out.println(principal);
+
+
+        System.out.print("Annual Interest Rate: ");
+        float annualInterest = scanner.nextFloat();
+        float monthlyInterest = annualInterest/PERCENT/MONTHS_IN_YEAR;
+        System.out.print("Period (years): ");
+        byte period = scanner.nextByte();
+        int numberOfPayments = period*MONTHS_IN_YEAR;
+        double mortgage = principal
+                * (monthlyInterest* Math.pow(1+monthlyInterest, numberOfPayments))
+                /Math.pow(1+monthlyInterest, numberOfPayments) -1;
+        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+        System.out.println(mortgageFormatted);
 
     }
 }
