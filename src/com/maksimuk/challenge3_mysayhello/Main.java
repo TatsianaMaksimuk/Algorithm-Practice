@@ -1,4 +1,4 @@
-package com.maksimuk.challenge3_sayhello;
+package com.maksimuk.challenge3_mysayhello;
 
 import java.util.Scanner;
 
