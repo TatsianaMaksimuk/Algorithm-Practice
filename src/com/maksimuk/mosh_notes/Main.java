@@ -327,7 +327,7 @@ public class Main {
         final byte MONTHS_IN_YEAR =12;
         final byte PERCENT =100;
 
-        Scanner m_scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Principal ($1K - $1M): ");
         int principal = scanner.nextInt();
         while (principal>1000 && principal<1000000)
