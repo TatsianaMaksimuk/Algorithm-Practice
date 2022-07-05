@@ -10,6 +10,9 @@ public class Main {
         //Ex.2
         System.out.println(nextNumber(0));
         System.out.println(nextNumber(-2));
+        //ex.4
+        System.out.println(convertedMin((3)));//ex.5
+        System.out.println(giveMeSomething("is better than nothing"));
     }
 
     //Ex.1 return first element of the array
@@ -28,10 +31,25 @@ public class Main {
         int index = -1;
 
         for (int i = 0; i < arr.length; i++) {
-
+            if (arr[i] == num) index = i;
         }
 
         return index;
 
     }
+
+    //Ex 4.Convert Minutes into Seconds
+    public static int convertedMin(int min) {
+        return (min * 60);
+
+        //Ex.5 Return Something to Me!
+
+
+    }
+
+    public static String giveMeSomething(String str) {
+        return "something" + str;
+    }
 }
+
+
