@@ -1,8 +1,9 @@
-package com.maksimuk.asktheuser;
+package com.maksimuk.asktheuser01;
 
 public class User {
 
     private byte age;
+
     private short salary;
     private int familyBudget;
     private float creditScore;

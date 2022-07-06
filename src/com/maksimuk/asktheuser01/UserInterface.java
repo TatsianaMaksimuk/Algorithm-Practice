@@ -1,4 +1,4 @@
-package com.maksimuk.asktheuser;
+package com.maksimuk.asktheuser01;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class UserInterface {
     private static int familyBudget;
     private static float creditScore;
     private static long propertyPrice;
-    private static long propertyArea;
+    private static double propertyArea;
     private static boolean hasChildren;
     private static String fullName;
 
@@ -34,13 +34,13 @@ public class UserInterface {
     }
 
     private static void salary() {
-        System.out.println("State your salary: ");
+        System.out.println("State your monthly salary: ");
         salary = scanner.nextShort();
         System.out.println("Monthly salary: " + salary + "$");
     }
 
     private static void familyBudget() {
-        System.out.println("State your monthly family budget: ?");
+        System.out.println("State your family budget: ?");
         familyBudget = scanner.nextInt();
         System.out.println("Monthly family budget: " + familyBudget);
     }
@@ -48,7 +48,7 @@ public class UserInterface {
     private static void creditScore () {
         System.out.println("State your credit Score: ");
         creditScore = scanner.nextFloat();
-        System.out.println("Credit Score: " + creditScore + "%");
+        System.out.println("Credit Score: " + creditScore);
     }
 
     private static void propertyPrice () {
@@ -59,7 +59,7 @@ public class UserInterface {
 
     private static void propertyArea () {
         System.out.println("State your property area: ");
-        propertyArea = scanner.nextLong();
+        propertyArea = scanner.nextDouble();
         System.out.println("Property Area: " + propertyArea);
     }
 
@@ -71,7 +71,9 @@ public class UserInterface {
 
     private static void fullName(){
         System.out.println("What is your First Name?");
+        scanner.nextLine(); // clears \n new line character from input Stream (system.in)
         String firstName = scanner.nextLine();
+
         System.out.println("What is your Last Name?");
         String lastName = scanner.nextLine();
         fullName = firstName + " " + lastName;
