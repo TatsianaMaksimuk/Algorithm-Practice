@@ -24,6 +24,7 @@ public class UserInterface {
         fullName();
 
         User generatedUser1 = new User(age, salary, familyBudget, creditScore, propertyPrice, propertyArea,hasChildren,fullName);
+
         System.out.println(generatedUser1);
     }
 
