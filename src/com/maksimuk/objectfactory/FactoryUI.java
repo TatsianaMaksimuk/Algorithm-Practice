@@ -58,28 +58,42 @@ public class FactoryUI {
         }
     }
 
-    public static int readInt (String question, int min, int max){
-        while (true){
-            try{
-                System.out.println(question + "\n(" + min + "-" + max + "): " );
+    public static int readInt(String question, int min, int max) {
+        while (true) {
+            try {
+                System.out.println(question + "\n(" + min + "-" + max + "): ");
                 int input = scanner.nextInt();
                 scanner.nextLine();
                 return input;
-            } catch(Exception exception) {
+            } catch (Exception exception) {
                 System.out.println("Input must be between" + min + "-" + max);
                 scanner.nextLine();
             }
         }
     }
 
-    public static long readLong(String question, int min, long max){
-        while (true){
-            try{
-                System.out.println(question + "\n(" + min + "-" + max + "): " );
+    public static long readLong(String question, int min, long max) {
+        while (true) {
+            try {
+                System.out.println(question + "\n(" + min + "-" + max + "): ");
                 long input = scanner.nextLong();
                 scanner.nextLine();
                 return input;
-            } catch(Exception exception) {
+            } catch (Exception exception) {
+                System.out.println("Input must be between" + min + "-" + max);
+                scanner.nextLine();
+            }
+        }
+    }
+
+    public static float readFloat(String question, int min, long max) {
+        while (true) {
+            try {
+                System.out.println(question + "\n(" + min + "-" + max + "): ");
+                float input = scanner.nextFloat();
+                scanner.nextLine();
+                return input;
+            } catch (Exception exception) {
                 System.out.println("Input must be between" + min + "-" + max);
                 scanner.nextLine();
             }
