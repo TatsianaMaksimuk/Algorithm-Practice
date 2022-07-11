@@ -71,5 +71,19 @@ public class FactoryUI {
             }
         }
     }
+
+    public static long readLong(String question, int min, long max){
+        while (true){
+            try{
+                System.out.println(question + "\n(" + min + "-" + max + "): " );
+                long input = scanner.nextLong();
+                scanner.nextLine();
+                return input;
+            } catch(Exception exception) {
+                System.out.println("Input must be between" + min + "-" + max);
+                scanner.nextLine();
+            }
+        }
+    }
 }
 

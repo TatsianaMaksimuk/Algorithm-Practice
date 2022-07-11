@@ -9,6 +9,7 @@ public class MainSong {
         String genre = FactoryUI.readString("What is the genre?");
         short seconds = FactoryUI.readShort("What is the duration of the song in seconds?", (short) 0, (short) 10000);
 
-
+         Song song01 = new Song(title, artist,genre, seconds);
+         System.out.println(song01);
     }
 }
