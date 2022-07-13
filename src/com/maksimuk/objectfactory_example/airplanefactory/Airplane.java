@@ -1,5 +1,7 @@
 package com.maksimuk.objectfactory_example.airplanefactory;
 
+import com.maksimuk.objectfactory_example.UI;
+
 public class Airplane {
 
 
@@ -50,13 +52,14 @@ public class Airplane {
 
     @Override
     public String toString() {
-        return "Airplane{" +
-                "modelName='" + modelName + '\'' +
-                ", tailNumber='" + tailNumber + '\'' +
-                ", passengerCap=" + passengerCap +
-                ", marketValue=" + marketValue +
-                ", gasTank=" + gasTank +
-                ", isFlying=" + isFlying +
-                '}';
+        return "Airplane:\n" +
+                "Model: " + modelName + '\n' +
+                ", Tail Number: " + tailNumber + '\n' +
+                ", Passenger Cap: " + passengerCap +'\n' +
+                ", Price: " + marketValue + '\n' +
+                ", Gas Tank %" + gasTank + '\n' +
+                ", Airborne: " + (isFlying? "The plane is in the air":"The plane is on the ground");
     }
+
 }
+

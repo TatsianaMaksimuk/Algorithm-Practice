@@ -82,6 +82,30 @@ public class UI {
                 System.out.println(question + "\n(" + min + "-" + max + "): ");
                 int input = scanner.nextInt();
                 scanner.nextLine();
+                if (input <= max && input >= min ){
+                    return input;
+                } else {
+                    System.out.println(" Input must be between " + min + " and " + max);
+                }
+            } catch (Exception exception) { // exception == error
+                System.out.println("Input must between" + min + "-" + max);
+                scanner.nextLine();
+            }
+
+        }
+    }
+
+    public static long readLong(String question,long min, long max) {
+        while (true) {
+            try {
+                System.out.println(question + "\n(" + min + "-" + max + "): ");
+                long input = scanner.nextLong();
+                scanner.nextLine();
+                if (input <= max && input >= min ){
+                    return input;
+                } else {
+                    System.out.println(" Input must be between " + min + " and " + max);
+                }
                 return input;
             } catch (Exception exception) { // exception == error
                 System.out.println("Input must between" + min + "-" + max);
@@ -91,6 +115,57 @@ public class UI {
         }
     }
 
+    public static byte readByte(String question,byte min, byte max) {
+        while (true) {
+            try {
+                System.out.println(question + "\n(" + min + "-" + max + "): ");
+                byte input = scanner.nextByte();
+                scanner.nextLine();
+                if (input <= max && input >= min ){
+                    return input;
+                } else {
+                    System.out.println(" Input must be between " + min + " and " + max);
+                }
+                return input;
+            } catch (Exception exception) { // exception == error
+                System.out.println("Input must between" + min + "-" + max);
+                scanner.nextLine();
+            }
+
+        }
+    }
+
+    public static float readFloat(String question,byte min, byte max) {
+        while (true) {
+            try {
+                System.out.println(question + "\n(" + min + "-" + max + "): ");
+               float input = scanner.nextFloat();
+                scanner.nextLine();
+                if (input <= max && input >= min ){
+                    return input;
+                } else {
+                    System.out.println(" Input must be between " + min + " and " + max);
+                }
+                return input;
+            } catch (Exception exception) { // exception == error
+                System.out.println("Input must between" + min + "-" + max);
+                scanner.nextLine();
+            }
+
+        }
+    }
+
+    public static char readChar(String question) {
+        while (true) {
+            System.out.println(question);
+            String input = scanner.nextLine().trim(); //we dont want charAt to grab a space
+            if (input.length() == 1) {
+                return input.charAt(0); //String is an array of characters, CharAt for grabbing a character in a string in special location
+            } else if (input.equals("")){
+                System.out.println("\nYou cannot leave the input blank");
+            }
+        }
+    }
 
 }
 
