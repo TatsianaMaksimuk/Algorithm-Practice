@@ -99,5 +99,32 @@ public class FactoryUI {
             }
         }
     }
+
+    public static byte readByte(String question, byte min, byte max) {
+        while (true) {
+            try {
+                System.out.println(question + "\n(" + min + "-" + max + "): ");
+                byte input = scanner.nextByte();
+                scanner.nextLine();
+                return input;
+            } catch (Exception exception) {
+                System.out.println("Input must be between" + min + "-" + max);
+                scanner.nextLine();
+            }
+        }
+    }
+
+    public static char readChar(String question) {
+        while (true) {
+            System.out.println(question);
+            String input = scanner.nextLine().trim(); //we dont want charAt to grab a space
+            if (input.length() == 1) {
+                return input.charAt(0); //String is an array of characters, CharAt for grabbing a character in a string in special location
+            } else if (input.equals("")){
+                System.out.println("\nYou cannot leave the input blank");
+            }
+        }
+    }
 }
+
 

@@ -34,7 +34,7 @@ public class MainAirplane {
 
 
             //If the code get to this pont, the user will create a plane
-            Airplane generatedAirplane = createAirplane();
+            Airplane generatedAirplane = Airplane.createAirplane();
             hanger.add(generatedAirplane);
             System.out.println("Created airplane\n" + generatedAirplane);
 
@@ -44,14 +44,5 @@ public class MainAirplane {
 
     }
 
-    private static Airplane createAirplane() {
-        String modelName = UI.readString("What is the model name?");
-        String tailNumber = "AAA";//UI.readString("What is the tail number?");
-        short passengerCap = 100;//UI.readShort("What is the plane passenger capacity?",(short)0,(short) 300);
-        int marketValue = 100_00_00;//UI.readInt("What's the plane market value?", 0, 10000000);
-        double gasTank = .5; //UI.readDouble ("Current gas tank as decimal?", 0,1);
-        boolean isFlying = false; // UI.readBoolean("Is airplane flying?");
-        return new Airplane(modelName, tailNumber, passengerCap, marketValue, gasTank, isFlying);
 
-    }
 }

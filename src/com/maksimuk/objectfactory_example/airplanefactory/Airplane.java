@@ -13,16 +13,16 @@ public class Airplane {
     private long marketValue;
     private double gasTank;
     private boolean isFlying;
+    private Airplane() {};
 
-
-    public Airplane(String modelName, String tailNumber, short passengerCap, long marketValue, double gasTank, boolean isFlying) {
+   /* private Airplane(String modelName, String tailNumber, short passengerCap, long marketValue, double gasTank, boolean isFlying) {
         this.modelName = modelName;
         this.tailNumber = tailNumber;
         this.passengerCap = passengerCap;
         this.marketValue = marketValue;
         this.gasTank = gasTank;
         this.isFlying = isFlying;
-    }
+    }*/
 
     public String getModelName() {
         return modelName;
@@ -61,5 +61,20 @@ public class Airplane {
                 ", Airborne: " + (isFlying? "The plane is in the air":"The plane is on the ground");
     }
 
+
+    public static Airplane createAirplane() {
+
+        Airplane newAirplane = new Airplane();
+
+        newAirplane.modelName = UI.readString("What is the model name?");
+        newAirplane.tailNumber = "AAA";//UI.readString("What is the tail number?");
+        newAirplane.passengerCap = 100;//UI.readShort("What is the plane passenger capacity?",(short)0,(short) 300);
+        newAirplane.marketValue = 100_00_00;//UI.readInt("What's the plane market value?", 0, 10000000);
+        newAirplane.gasTank = .5; //UI.readDouble ("Current gas tank as decimal?", 0,1);
+        newAirplane.isFlying = false; // UI.readBoolean("Is airplane flying?");
+
+        return newAirplane;
+
+    }
 }
 
