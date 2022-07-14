@@ -13,6 +13,7 @@ public class Main {
         //ex.4
         System.out.println(convertedMin((3)));//ex.5
         System.out.println(giveMeSomething("is better than nothing"));
+
     }
 
     //Ex.1 return first element of the array
@@ -50,6 +51,7 @@ public class Main {
     public static String giveMeSomething(String str) {
         return "something" + str;
     }
+
 }
 
 
