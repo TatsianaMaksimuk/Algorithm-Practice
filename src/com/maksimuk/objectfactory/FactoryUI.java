@@ -1,6 +1,7 @@
 package com.maksimuk.objectfactory;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FactoryUI {
@@ -120,9 +121,35 @@ public class FactoryUI {
             String input = scanner.nextLine().trim(); //we dont want charAt to grab a space
             if (input.length() == 1) {
                 return input.charAt(0); //String is an array of characters, CharAt for grabbing a character in a string in special location
-            } else if (input.equals("")){
+            } else if (input.equals("")) {
                 System.out.println("\nYou cannot leave the input blank");
             }
+        }
+    }
+
+
+    public static ArrayList<String> readListOfStrings(String question, byte min, byte max) {
+        ArrayList<String> responses = new ArrayList<>();
+        System.out.println(question);
+        System.out.println("Please, enter at least " + min + " inputs and at most " + max + " inputs.");
+        for (int i = 0; i < max; i++) {
+            String userInput = readString("(" + (i + 1) + "/" + max + ")");
+            responses.add(userInput);
+            if (responses.size() == max) {
+                System.out.println("Max number of inputs has been entered");
+            } else if (responses.size() >= min && !readYesOrNo("Would you like to add more inputs?")) break;
+        }
+        System.out.println("Your responses have been recorded.");
+        return responses;
+    }
+
+    public static boolean readYesOrNo(String question) {
+        while (true) {
+            String userInput = readString(question + "\n(y/n): ");
+            char selection = userInput.toLowerCase().charAt(0);
+            if (selection == 'y') return true;
+            if (selection == 'n') return false;
+            System.out.println("Input must be y or n");
         }
     }
 }

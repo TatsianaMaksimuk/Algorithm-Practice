@@ -1,5 +1,7 @@
 package com.maksimuk.objectfactory.artworkfactory;
 
+import java.util.ArrayList;
+
 public class Artwork {
     private String name;
 
@@ -11,14 +13,17 @@ public class Artwork {
     private float heightInCm;
 
 
+    private ArrayList<String> list;
 
-    public Artwork(String name, String author, short year, String medium, float widthInCm, float heightInCm) {
+
+    public Artwork(String name, String author, short year, String medium, float widthInCm, float heightInCm, ArrayList<String> list) {
         this.name = name;
         this.author = author;
         this.year = year;
         this.medium = medium;
         this.widthInCm = widthInCm;
         this.heightInCm = heightInCm;
+        this.list = list;
     }
 
     public String getName() {
@@ -45,6 +50,9 @@ public class Artwork {
         return heightInCm;
     }
 
+    public ArrayList<String> getList() {
+        return list;
+    }
 
 
     @Override
@@ -54,7 +62,8 @@ public class Artwork {
                 ", author: " + author +
                 ", year: " + year +
                 ", medium: " + medium +
-                ", dimensions: " + widthInCm + "cm * " + heightInCm + " cm";
+                ", dimensions: " + widthInCm + "cm * " + heightInCm + " cm" +
+                "list" + list;
     }
 
 }

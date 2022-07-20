@@ -52,9 +52,11 @@ public class MainArtwork {
         String medium = FactoryUI.readString("Medium: ");
         float widthInCm = FactoryUI.readFloat("Width in cm ", 0, 1000000);
         float heightInCm = FactoryUI.readFloat("Height in cm ", 0, 1000000);
+        ArrayList<String> list = FactoryUI.readListOfStrings("For program to work", (byte)2, (byte)4);
 
-        return new Artwork(name, author, year, medium, widthInCm, heightInCm);
+        return new Artwork(name, author, year, medium, widthInCm, heightInCm, new ArrayList<>());
 
     }
+
 }
 
