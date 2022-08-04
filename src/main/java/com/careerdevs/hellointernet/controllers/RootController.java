@@ -1,7 +1,6 @@
 package com.careerdevs.hellointernet.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Random;
 
@@ -45,5 +44,20 @@ public class RootController {
         int upperbound = 3;
         return fullText[random.nextInt(upperbound)];
     }
+
+    @GetMapping("/line") //url address?nameOfTheRequestParam
+    @ResponseBody
+    private String line(@RequestParam int index){
+        String[] fullText = {"Hello from the other side", "I must've called a thousand times", "To tell you I'm sorry for everything that I've done", "But when I call, you never seem to be home"};
+        return fullText[index];
+
+    }
+
+    @GetMapping("/hello/{artist}/")
+    private String artist(@PathVariable String artist){
+
+        return artist;
+    }
+
 }
 
