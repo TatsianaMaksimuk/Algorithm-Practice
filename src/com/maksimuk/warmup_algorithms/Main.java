@@ -32,4 +32,18 @@ public class Main {
     public static int nextNumber(int par) {
         return par + 1;
     }
+
+
+    public static int findIndex(int[] arr, int num) {
+        int index = -1;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == num) index = i;
+        }
+
+        return index;
+
+    }
+
+
 }
