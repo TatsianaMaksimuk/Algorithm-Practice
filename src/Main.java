@@ -1,7 +1,4 @@
-import week1.BreakingTheRecords;
-import week1.MiniMaxSum;
-import week1.PlusMinus;
-import week1.TimeConversion;
+import week1.*;
 
 import java.util.List;
 
@@ -20,6 +17,13 @@ public class Main {
 
 
         BreakingTheRecords.returnRecords(List.of(10,22,9,25,5,30));
+
+        CamelCase.camelCaseMaker("S;C;LargeSoftwareBook");
+        CamelCase.camelCaseMaker("S;V;pictureFrame");
+        CamelCase.camelCaseMaker("S;M;plasticCup()");
+        CamelCase.camelCaseMaker("C;M;white sheet of paper");
+        CamelCase.camelCaseMaker("C;C;coffee machine");
+
 
     }
 
