@@ -12,7 +12,7 @@ public class Main {
 
         System.out.println("Ex.2: \n");
         MiniMaxSum.findMiniNaxSum(List.of(396285104, 573261094, 759641832, 819230764, 364801279));
-
+        System.out.println("Ex. 3: \n");
         TimeConversion.timeConversionFunction("08:00:15PM");
 
 
@@ -23,6 +23,9 @@ public class Main {
         CamelCase.camelCaseMaker("S;M;plasticCup()");
         CamelCase.camelCaseMaker("C;M;white sheet of paper");
         CamelCase.camelCaseMaker("C;C;coffee machine");
+
+
+        DivisibleSumPairs.divisibleSumPairs(6, 3, List.of(1, 3, 2, 6, 1, 2));
 
 
     }
