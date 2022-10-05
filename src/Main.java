@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Ex. 3: \n");
         TimeConversion.timeConversionFunction("08:00:15PM");
 
-
+        System.out.println("Ex. 4: \n");
         BreakingTheRecords.returnRecords(List.of(10,22,9,25,5,30));
 
         CamelCase.camelCaseMaker("S;C;LargeSoftwareBook");
@@ -24,9 +24,10 @@ public class Main {
         CamelCase.camelCaseMaker("C;M;white sheet of paper");
         CamelCase.camelCaseMaker("C;C;coffee machine");
 
-
+        System.out.println("Ex. 5: \n");
         DivisibleSumPairs.divisibleSumPairs(6, 3, List.of(1, 3, 2, 6, 1, 2));
 
+        System.out.println( SparseArrays.matchingStrings(List.of("aba", "baba", "aba", "xzxb"), List.of("aba", "xzxb", "ab")));
 
     }
 
