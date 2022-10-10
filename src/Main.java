@@ -1,6 +1,4 @@
-import Day0.HelloWorld;
-import Day1.DataTypes;
-import Day3.Operators;
+import Day3.ConditionalStatements;
 
 public class Main {
     public static void main(String[] args){
@@ -9,6 +7,8 @@ public class Main {
 
         //DataTypes.dataTypes();
 
-        Operators.solve(12.50, 20,5);
+        //Operators.solve(12.50, 20,5);
+
+        ConditionalStatements.caseCheck(4);
     }
 }

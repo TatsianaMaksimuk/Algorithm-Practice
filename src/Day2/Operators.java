@@ -1,4 +1,4 @@
-package Day3;
+package Day2;
 
 public class Operators {
     public static void solve(double meal_cost, int tip_percent, int tax_percent) {
