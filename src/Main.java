@@ -1,4 +1,5 @@
 import Day04.Person;
+import Day5.Loops;
 
 public class Main {
     public static void main(String[] args){
@@ -10,8 +11,10 @@ public class Main {
         //Operators.solve(12.50, 20,5);
 
         //ConditionalStatements.caseCheck(4);
-        Person person = new Person(13);
-        person.amIOld();
+        //Person person = new Person(13);
+        //person.amIOld();
+
+        Loops.printLoop(4);
 
     }
 }
