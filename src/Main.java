@@ -1,5 +1,7 @@
 import Day04.Person;
 import Day5.Loops;
+import Day6.Review;
+import Day7.Array;
 
 public class Main {
     public static void main(String[] args){
@@ -14,7 +16,10 @@ public class Main {
         //Person person = new Person(13);
         //person.amIOld();
 
-        Loops.printLoop(4);
+        //Loops.printLoop(4);
 
+       // Review.evensAndOdds("Hacker");
+
+        Array.reverse("1 2 3 4");
     }
 }
