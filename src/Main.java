@@ -26,5 +26,6 @@ public class Main {
         Maps m =new Maps();
         m.dataInput("sam 99912222");
         m.keyPrint();
+        m.search("sam");
     }
 }
