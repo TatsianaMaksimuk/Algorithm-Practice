@@ -2,6 +2,7 @@ import Day04.Person;
 import Day5.Loops;
 import Day6.Review;
 import Day7.Array;
+import Day8.Maps;
 
 public class Main {
     public static void main(String[] args){
@@ -20,6 +21,10 @@ public class Main {
 
        // Review.evensAndOdds("Hacker");
 
-        Array.reverse("1 2 3 4");
+       // Array.reverse("1 2 3 4");
+
+        Maps m =new Maps();
+        m.dataInput("sam 99912222");
+        m.keyPrint();
     }
 }
