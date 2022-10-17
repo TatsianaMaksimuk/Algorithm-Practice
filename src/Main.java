@@ -30,5 +30,6 @@ public class Main {
 //        m.search("sam");
 
             System.out.println(Recursion.factorial(5));
+        System.out.println(Recursion.factorial(3));
     }
 }
