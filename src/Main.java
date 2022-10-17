@@ -3,6 +3,7 @@ import Day5.Loops;
 import Day6.Review;
 import Day7.Array;
 import Day8.Maps;
+import Day9.Recursion;
 
 public class Main {
     public static void main(String[] args){
@@ -27,5 +28,7 @@ public class Main {
 //        m.dataInput("sam 99912222");
 //        m.keyPrint();
 //        m.search("sam");
+
+            System.out.println(Recursion.factorial(5));
     }
 }
