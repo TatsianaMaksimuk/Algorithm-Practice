@@ -23,9 +23,9 @@ public class Main {
 
        // Array.reverse("1 2 3 4");
 
-        Maps m =new Maps();
-        m.dataInput("sam 99912222");
-        m.keyPrint();
-        m.search("sam");
+//        Maps m =new Maps();
+//        m.dataInput("sam 99912222");
+//        m.keyPrint();
+//        m.search("sam");
     }
 }
