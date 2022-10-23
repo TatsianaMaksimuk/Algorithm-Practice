@@ -15,4 +15,14 @@ public abstract class Bird {
     public int getAge(){
         return age;
     }
+
+
+    //day14 practice
+    //HAPPY =10
+    //f(x) = x+5+happy
+
+    public void doSomething(String thing){
+        System.out.println("Doing "+thing);
+    }
+
 }
