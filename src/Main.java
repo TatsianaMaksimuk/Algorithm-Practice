@@ -1,23 +1,12 @@
-import Day04.Person;
-import Day11.Book;
-import Day11.LibraryCatalogue;
-import Day12.Animal;
-import Day12.Cat;
 import Day12.Dog;
 import Day13.Bird;
 import Day13.Cuckoo;
 import Day13.MyBook;
 import Day13.Raven;
-import Day5.Loops;
-import Day6.Review;
-import Day7.Array;
-import Day8.Maps;
-import Day9.Factorial;
-import Day9.Recursion;
+import Day15.LinkedListUS;
 
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
+import java.sql.SQLOutput;
+import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -114,7 +103,12 @@ public class Main {
         MyBook theWitcher = new MyBook("The Witcher", "Author", 15);
         theWitcher.display();
 
-
+//Day15
+        LinkedList<String> linkedList = new LinkedList<String>();
+        linkedList.add("Boop");
+        System.out.println(linkedList);
+        linkedList.add("Boop");
+        System.out.println(linkedList);
     }
 }
 
