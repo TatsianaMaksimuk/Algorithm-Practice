@@ -4,9 +4,9 @@ import java.io.PrintStream;
 import java.util.LinkedList;
 import java.util.Stack;
 
-public class Queuey {
+public class Queuey<D> { //D means whatever we declare it to be
 
-    LinkedList queue;
+    LinkedList<D> queue;
     //making queue instance;
 
     public Queuey() {
@@ -24,18 +24,19 @@ public class Queuey {
     }
 
     //enqueueing an item, adding it to the end of the list
-    public void enqueue(String s) {
+    public void enqueue(D s) {
         queue.addLast(s);
     }
 
     //dequeuing an item
-    public String dequeue() {
-        return (String) queue.remove(0); //we're casting here, we can use .removeFirst
+    public D dequeue() {
+        return  queue.remove(0); //we're casting here, we can use .removeFirst
     }
 
     //peek at the first item
-    public String peek() {
-        return (String) queue.get(0); //casting. we can use .peek()
+    public D peek() {
+        return queue.get(0);
+        //return (String) queue.get(0); //casting. we can use .peek()
     }
 
 
@@ -43,15 +44,15 @@ public class Queuey {
 
         //For int
 
-//        Queuey numberQueue = new Queuey();
-//        numberQueue.enqueue(5);
-//        numberQueue.enqueue(7);
-//        numberQueue.enqueue(6);
-//        System.out.println("Peek at first: " + numberQueue.peek());
-//        System.out.println("First out: " + numberQueue.dequeue());
-//        System.out.println("Peek at second, now first: " + numberQueue.peek());
-//        System.out.println("Second out: " + numberQueue.dequeue());
-//        System.out.println("Third out: " + numberQueue.dequeue());
+     Queuey numberQueue = new Queuey();
+        numberQueue.enqueue(2);
+     numberQueue.enqueue(5);
+    numberQueue.enqueue(6);
+        System.out.println("Peek at first: " + numberQueue.peek());
+       System.out.println("First out: " + numberQueue.dequeue());
+      System.out.println("Peek at second, now first: " + numberQueue.peek());
+        System.out.println("Second out: " + numberQueue.dequeue());
+        System.out.println("Third out: " + numberQueue.dequeue());
 
 
         //For String
