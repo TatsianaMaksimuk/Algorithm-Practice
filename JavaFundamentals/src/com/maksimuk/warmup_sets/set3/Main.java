@@ -76,7 +76,9 @@ public class Main {
     public static String reverse(String str) {
         String result = "";
         char[] try1 = str.toCharArray();
-        for (int i = try1.length - 1; i >= 0; i--) result += try1[i];
+        for (int i = try1.length - 1; i >= 0; i--)
+            result += try1[i];
+
 
         return result;
     }
