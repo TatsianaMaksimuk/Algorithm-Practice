@@ -16,6 +16,8 @@ public class GetMappingService {
         return itemObject;
     }
 
+
+
     //the Stream API is used to process collections
     //of objects. A stream is a sequence of objects
     //that supports various methods which can be
@@ -24,5 +26,22 @@ public class GetMappingService {
     //We can use Stream collect() function to perform a mutable reduction operation and concatenate the list elements.
     public List<Item> getItemById(int id){
         return getAllItems().stream().filter(item -> item.getItemNum()==id).collect(Collectors.toList());
+    }
+
+//postMapping practice:
+    private static List<Item> loadItemsFromDb(){
+        List<Item> itemObject = new ArrayList<Item>();
+        itemObject.add(new Item(1, "keys"));
+        itemObject.add(new Item(2, "pen"));
+        itemObject.add(new Item(3, "notepad"));
+        return itemObject;
+    }
+
+    public List<Item> items = loadItemsFromDb();
+
+
+    public String addItems (Item item){
+        items.add(item);
+        return "Item added";
     }
 }

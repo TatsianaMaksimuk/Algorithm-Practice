@@ -15,12 +15,12 @@ public class PostController {
 
 
     @GetMapping("/getAllItems")
-    public List<Item> getAllItems(){
+    public List<Item> getAllItems() {
         return service.getAllItems();
     }
 
     @PostMapping("/addItems")
-    public void addItems(@RequestBody Item item){
+    public void addItems(@RequestBody Item item) {
         service.addItems(item);
 
     }
