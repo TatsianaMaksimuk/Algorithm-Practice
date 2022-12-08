@@ -31,6 +31,9 @@ public class Main {
 
         sortNumsAscending(new int[]{1, 2, 10, 50, 5});
         sortNumsAscending(new int[]{80, 29, 4, -95, -24, 85});
+
+
+        System.out.println(revInt(14));
     }
 
 
@@ -75,6 +78,16 @@ public class Main {
     public static StringBuffer rev(String str) {
         StringBuffer rev = new StringBuffer(str);
         return rev.reverse();
+    }
+
+    public static int revInt(int num){
+        String toReverse = Integer.toString(num);
+
+        String reverseNum = new StringBuffer(toReverse).reverse().toString();
+
+        int revInt = Integer.parseInt(reverseNum.replace('-', ' ').trim());
+
+        return revInt;
     }
 
     //Video Length in Seconds

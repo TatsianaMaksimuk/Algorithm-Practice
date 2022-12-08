@@ -13,6 +13,11 @@ public class set4 {
         System.out.println(numberSyllables("beau-ti-ful"));
         System.out.println(numberSyllables("on-o-mat-o-poe-ia"));
 
+
+        System.out.println(sullabsNum("buf-fet"));
+        System.out.println(sullabsNum("beau-ti-ful"));
+        System.out.println(sullabsNum("on-o-mat-o-poe-ia"));
+
         //Case Insensitive Comparison
 
         System.out.println(match("hello", "hELLo"));
@@ -35,6 +40,15 @@ public class set4 {
         String[] syllabs = word.split("-");
         return syllabs.length;
     }
+
+    public static int sullabsNum (String word){
+    int counter= 0;
+    for (int i = 0; i<word.length();i++){
+        if (word.charAt(i) == '-') counter++;
+    }
+    return counter+1;
+    }
+
 
     //Case Insensitive Comparison
     public static boolean match(String str1, String str2) {
