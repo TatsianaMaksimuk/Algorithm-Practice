@@ -1,5 +1,28 @@
 package Day29;
 
+//& Bitwise AND. This binary operation evaluates to 1 (true) if both operands are true, otherwise  (false). In other words:
+//
+//1 & 1 = 1
+//1 & 0 = 0
+//0 & 1 = 0
+//0 & 0 = 0
+
+//| Bitwise Inclusive OR. This binary operation evaluates to  if either operand is true, otherwise  (false) if both operands are false. In other words:
+//
+//1 | 1 = 1
+//1 | 0 = 1
+//0 | 1 = 1
+//0 | 0 = 0
+
+//^ Bitwise Exclusive OR or XOR. This binary operation evaluates to  (true) if and only if exactly one of the two operands is ; if both operands are  or , it evaluates to  (false). In other words:
+//
+//1 ^ 1 = 0
+//1 ^ 0 = 1
+//0 ^ 1 = 1
+//0 ^ 0 = 0
+
+//~ The unary Bitwise Complement operator flips every bit; for example, the bitwise-inverted 8-bit binary number 01111001 becomes 10000110,
+// and the bitwise-inverted signed decimal  integer 8 becomes -9.
 public class BinaryString {
 
     //This code  converts a word and an integer to binary strings:
