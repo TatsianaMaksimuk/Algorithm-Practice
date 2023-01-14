@@ -9,4 +9,4 @@ public class Stdin {
             int n = scanner.nextInt();
             System.out.println(n);
         }
-}
+}}
